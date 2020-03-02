@@ -1,4 +1,4 @@
-# openshiftflaskapp
+# OKD Flask App
 
 ### Deployment with OKD
 
