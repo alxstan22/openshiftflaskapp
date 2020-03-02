@@ -1,8 +1,9 @@
 # OKD Flask App
+This implementation uses Minishift CLI tools and VirtualBox for OKD cluster and app deployment.
 
 ### Deployment with OKD
 
-1. Create an OKD project. Browse catalog and chose a Python project. Use this repository's HTTPS link as the source.
+1. Create an OKD project. Browse catalog and choose a Python project. Use this repository's HTTPS link as the source.
 
 2. Build and deploy the cluster.
 
