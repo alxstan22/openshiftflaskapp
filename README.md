@@ -127,3 +127,11 @@ Workaround:
 $ oc login
 ```
 If prompted for server, enter the web console url without the '/console' attached at the end. Continue through prompts.
+
+
+**Minishfit error in VirtualBox**
+
+Known Cause
+
+Workaround:
+Uninstall and reinstall VirtualBox
