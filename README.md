@@ -39,10 +39,10 @@ Minishift launches a single-node OKD cluster inside a virtual machine. The OpenS
 
 **Install**
 1.	Install Minishift via Homebrew and update the binary:  
-**$brew cask install minishift
-$brew cask install --force minishift**
+**$brew cask install minishift**
+**brew cask install --force minishift**
 
-3.	Install OpenShift CLII:
+3.	Install OpenShift CLI:
 **$ brew install openshift-cli**
 
 
