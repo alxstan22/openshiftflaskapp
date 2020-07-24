@@ -1,5 +1,14 @@
 # OKD Flask App
-Learn how to deploy applications in the OKD, the open source community version of OpenShift, locally. Below are instructions on how to configure an OKD environment in order to deploy this Flask app and many other applications on a containerization platform.
+Learn how to deploy applications in the OKD, the open source community version of OpenShift. Below are instructions on how to configure Minishift in order to deploy this Flask app and many other applications using the OKD containerization platform console.
+
+Definitions to know:
+
+**Minishift** – Command Line command responsible for launching a single-node OKD cluster inside a virtual machine to run ODK locally. Running this cluster allows you to then connect to the OKD interface located at the web console URL. MUST be running in order to access OKD. 
+
+**OKD** – Optimized distribution of Kubernetes that allows you to create and manage containers; the community edition of RedHat’s OpenShift container platform. Provides a way to create a local, all-in-one cluster on your own machine using the oc command-line tool. Also adds developer and operation-centric tools for container management through rapid app development, easy deployment, and scaling. More information on OKD can be found here. 
+
+**OpenShift Cluster** – A cluster is a group of connected machines or nodes working together to act as one. A Kubernetes cluster consists of one or more masters and a set of nodes.  
+
 
 # Getting Started with OKD
 Set up the OpenShift environment using OKD, create your own web app in a text editor, and deploy your web app via OKD using GitHub.
@@ -106,11 +115,12 @@ $ minishift config set vm-driver virtualbox
 $ minishift start
 ```
 
-
 **"Cannot set oc CLI context"**
 
 Unknown Cause
 
 Workaround:
+```
 $ oc login
+```
 If prompted for server, enter the web console url without the '/console' attached at the end. Continue through prompts.
