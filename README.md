@@ -19,6 +19,7 @@ Objectives:
 
 **Prerequisites**
 1.	Homebrew
+
 If you do not have Homebrew installed, please go to terminal and run:
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
@@ -27,9 +28,11 @@ If this does not work, go to brew.sh and run the command in the box under Instal
  
 
 2.	GitHub Account
+
 GitHub is a FREE repository space to store code. In this document we are going to upload our application to GitHub and allow OKD to pull it from there in order to deploy it.
 
 3.	Text Editor
+
 To create the web application, download a text editor. Atom or Sublime is recommended.
 
 
