@@ -1,5 +1,5 @@
 # OKD Flask App
-Learn how to deploy applications in the OKD, the open source community version of OpenShift. Below are instructions on how to configure Minishift in order to deploy this Flask app and many other applications using the OKD containerization platform console.
+Learn how to deploy applications in the OKD, the open source community version of OpenShift. Below are instructions on how to configure Minishift in order to deploy many applications using the OKD containerization platform console. This Flask App is deployable.
 
 Definitions to know:
 
