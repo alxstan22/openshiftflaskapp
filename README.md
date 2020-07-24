@@ -34,20 +34,21 @@ Install VirtualBox Virtualization Environment
 2.	Under VirtualBox 6.1.4 platform packages, press OS X host to trigger download. Open and configure. 
 *Note:  Your computer may be set to deny applications from the web, rendering VirtualBox unable to download. To allow VirtualBox to download on your computer, go to System Preferences > Security & Privacy > General. Press the golden lock at the very bottom of the page. Enter your password and you should physically see it unlock. Reopen the download and everything should go through.
 
-## Install Minishift and CLI tools
+## Minishift and CLI tools
 Minishift launches a single-node OKD cluster inside a virtual machine. The OpenShift CLI (Command Line Interface) allows you to use oc commands too. (
 
-1.	Install Minishift via Homebrew: 
+**Install**
+1.	Install Minishift via Homebrew:  
 **brew cask install minishift**
 
-To update the binary:
+2. To update the binary: 
 **$ brew cask install --force minishift**
 
-2.	Install OpenShift CLI via Homebrew:
+3.	Install OpenShift CLI via Homebrew: 
 **$ brew install openshift-cli**
 
 
-Starting Minishift
+**Starting Minishift**
 1.	Create an instance of Minishift inside VirtualBox:
 $ minishift config set vm-driver virtualbox
 
