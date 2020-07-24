@@ -1,7 +1,7 @@
 # OKD Flask App
-Learn how to use OKD, the community version of OpenShift, and how to launch the OKD clusters with Minishift.
+Learn how to deploy applications in the OKD, the open source community version of OpenShift, locally. Below are instructions on how to configure an OKD environment in order to deploy this Flask app and many other applications on a containerization platform.
 
-# GETTTING STARTED WITH OKD
+# Getting Started with OKD
 Set up the OpenShift environment using OKD, create your own web app in a text editor, and deploy your web app via OKD using GitHub.
 Objectives:
 •	Set Up the OKD Environment
@@ -24,10 +24,10 @@ GitHub is a FREE repository space to store code. In this document we are going t
 To create the web application, download a text editor. Atom or Sublime is recommended.
 
 
-## Set Up the OKD Environment
+# Set Up the OKD Environment
 OKD is the platform is where you will be creating and deploying applications. Install minishift and OpenShift CLI tools via Homebrew in the macOS terminal. Then, create an instance of Minishift to run the OKD cluster inside VirtualBox. Finally, you will set up your OKD credentials and log into the OKD web browser platform. 
- 
-Install VirtualBox Virtualization Environment
+
+**Install VirtualBox Virtualization Environment**
 1.	Visit VirtualBox website at https://www.virtualbox.org/wiki/Downloads
  
 
@@ -38,7 +38,7 @@ Install VirtualBox Virtualization Environment
 
 Minishift launches a single-node OKD cluster inside a virtual machine. The OpenShift CLI (Command Line Interface) allows you to use oc commands too. (
 
-### Install
+## Install Minishift and OpenShift CLI
 
 1.	Install Minishift via Homebrew and update the binary:  
 ```
@@ -91,18 +91,20 @@ The OKD console should be in the browser! Now, log in with the credentials you j
 
 
 
-### Troubleshooting
+## Troubleshooting
 **"Could not set oc CLI context for 'minishift' profile"
 "Error starting the VM"**
 
 Known Causes: Updating VirtualBox
 
 Workaround:
+```
 $ minishift delete --force //Must use --force flag. Regular minishidt delete does NOT work
 $ rm -rf ~/.minishift
 $ minishift setup-cdk //If this command does not work, proceed to the next 
 $ minishift config set vm-driver virtualbox
 $ minishift start
+```
 
 
 **"Cannot set oc CLI context"**
