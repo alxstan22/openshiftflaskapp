@@ -38,41 +38,26 @@ Install VirtualBox Virtualization Environment
 Minishift launches a single-node OKD cluster inside a virtual machine. The OpenShift CLI (Command Line Interface) allows you to use oc commands too. (
 
 **Install**
-1.	Install Minishift via Homebrew:  
-**$brew cask install minishift**
+1.	Install Minishift via Homebrew and update the binary:  
+**$brew cask install minishift
+$brew cask install --force minishift**
 
-2. To update the binary: 
-**$brew cask install --force minishift**
-
-3.	Install OpenShift CLI via Homebrew: 
+3.	Install OpenShift CLII:
 **$ brew install openshift-cli**
 
 
 **Starting Minishift**
 1.	Create an instance of Minishift inside VirtualBox:
-$ minishift config set vm-driver virtualbox
+**$ minishift config set vm-driver virtualbox**
 
-2.	To start the minishift VM inside VirtualBox and spin up the OKD OpenShift cluster, run:
-$ minishift start
+2.	Start the minishift VM inside VirtualBox and spin up the OKD OpenShift cluster:
+**$ minishift start**
 
-To stop the cluster when you are done: $ minishift stop
-
-In the terminal you should see minishift booting up:
-
- 
+(To stop the cluster when you are done: **$ minishift stop**)
 
 *Note: If a minishift instance is already present in VirtualBox and you want to start a new one, you must run minishift delete, then run the minishift start again to replace it. This is NOT the same as stopping the minishift cluster, this is deleting it.
 
-Minishift sends its information to VirtalBox and you should see the minishift instance running in VirtualBox.
-
- 
-
-
-Upon a successful minishift launch, the terminal will give you the URL to access the OKD console seen here:
-
- 
-
-*Note: Finish Setup before visiting this OKD console URL
+Upon a successful minishift launch, the terminal will give you the URL to access the OKD console. Finish Setup before visiting OKD console URL.
 
 3.	On the very first boot of OKD, you should make a username and password to create a workspace. This workspace is where you can access and manage your cluster. Run the oc login command and follow these steps below: 
 
