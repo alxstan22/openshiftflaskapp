@@ -1,4 +1,110 @@
 # OKD Flask App
+Learn how to use OKD, the community version of OpenShift, and how to launch the OKD clusters with Minishift.
+
+# GETTTING STARTED WITH OKD
+Set up the OpenShift environment using OKD, create your own web app in a text editor, and deploy your web app via OKD using GitHub.
+Objectives:
+•	Set Up the OKD Environment
+•	Create Your Own Web App
+•	Deploy Python App on OKD
+
+**Prerequisites**
+1.	Homebrew
+If you do not have Homebrew installed, please go to terminal and run:
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+If this does not work, go to brew.sh and run the command in the box under Install Brew.
+ 
+
+2.	GitHub Account
+GitHub is a FREE repository space to store code. In this document we are going to upload our application to GitHub and allow OKD to pull it from there in order to deploy it.
+
+3.	Text Editor
+To create the web application, download a text editor. Atom or Sublime is recommended.
+
+
+## Set Up the OKD Environment
+OKD is the platform is where you will be creating and deploying applications. Install minishift and OpenShift CLI tools via Homebrew in the macOS terminal. Then, create an instance of Minishift to run the OKD cluster inside VirtualBox. Finally, you will set up your OKD credentials and log into the OKD web browser platform. 
+ 
+Install VirtualBox Virtualization Environment
+1.	Visit VirtualBox website at https://www.virtualbox.org/wiki/Downloads
+ 
+
+2.	Under VirtualBox 6.1.4 platform packages, press OS X host to trigger download. Open and configure. 
+*Note:  Your computer may be set to deny applications from the web, rendering VirtualBox unable to download. To allow VirtualBox to download on your computer, go to System Preferences > Security & Privacy > General. Press the golden lock at the very bottom of the page. Enter your password and you should physically see it unlock. Reopen the download and everything should go through.
+
+## Install Minishift and CLI tools
+Minishift launches a single-node OKD cluster inside a virtual machine. The OpenShift CLI (Command Line Interface) allows you to use oc commands too. (
+
+1.	Install Minishift via Homebrew: 
+**brew cask install minishift**
+
+To update the binary:
+**$ brew cask install --force minishift**
+
+2.	Install OpenShift CLI via Homebrew:
+**$ brew install openshift-cli**
+
+
+Starting Minishift
+1.	Create an instance of Minishift inside VirtualBox:
+$ minishift config set vm-driver virtualbox
+
+2.	To start the minishift VM inside VirtualBox and spin up the OKD OpenShift cluster, run:
+$ minishift start
+
+To stop the cluster when you are done: $ minishift stop
+
+In the terminal you should see minishift booting up:
+
+ 
+
+*Note: If a minishift instance is already present in VirtualBox and you want to start a new one, you must run minishift delete, then run the minishift start again to replace it. This is NOT the same as stopping the minishift cluster, this is deleting it.
+
+Minishift sends its information to VirtalBox and you should see the minishift instance running in VirtualBox.
+
+ 
+
+
+Upon a successful minishift launch, the terminal will give you the URL to access the OKD console seen here:
+
+ 
+
+*Note: Finish Setup before visiting this OKD console URL
+
+3.	On the very first boot of OKD, you should make a username and password to create a workspace. This workspace is where you can access and manage your cluster. Run the oc login command and follow these steps below: 
+
+ 
+If prompted for a server name (rare), enter YOUR web console URL without the ‘/console’ at the end.
+ 
+*Note: You may be prompted to log in with these credentials while accessing OKD through the web browser console. If you forget them, you can run oc login again and create another set of credentials for a new empty workspace. Acting as administrator grants access to all OKD projects. To become admin, run: oc login -u system:admin
+
+
+4.	Access the OKD console to start deploying apps, run:
+$ minishift console
+
+*Note: A secure browsing message will show in the browser if using the link. Just click ‘Advanced’ and click the link directly below to continue
+
+The OKD console should be in the browser!
+ 
+
+Now, log in with the credentials you just made and congrats! You can create a project or manage your cluster through this dashboard:
+ 
+
+
+KEEP IN MIND that you must start the minishift server ($ minishift start) in order to run and access the OKD console (minishift console)
+
+
+
+
+
+
+
+
+
+
+
 This implementation uses Minishift CLI tools and VirtualBox for OKD cluster and app deployment.
 
 ### Deployment with OKD
